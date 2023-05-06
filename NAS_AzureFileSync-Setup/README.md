@@ -19,7 +19,7 @@ So based on that the task scheduler frequency to run should be around every 10mi
 
 ### 1.2	Step 1 - Provide Input using CSV file [One Time Activity]
 
-i.	Copy the [Zip File](https://github.com/BasicCloudTech/PowershellAutomation/blob/main/NAS_AzureFileSync-Setup/NAS_AzureFileSync-Setup_5v.zip) to specific VM where we have storage sync service installed onto D: Drive and extract the file there:
+i.	Download the Tool Zip Package (https://github.com/BasicCloudTech/PowershellAutomation/raw/main/NAS_AzureFileSync-Setup/NAS_AzureFileSync-Setup_5v.zip) to specific VM where we have storage sync service installed onto D: Drive and extract the file there:
 <img src="./images/Picture2.png"/>
 
 ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file on your local machine for modification (for better visual on the data)
@@ -48,8 +48,36 @@ ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file 
 iii.	Once the changes are made to input.csv, copy back the input file from local machine to OnPrem Path
 D:\NASAzureFileSyncronizer\Script
 
+<img src="./images/Picture5.png"/>
+
 ### 1.3	Step 2 - Encrypt Confidential Value [One Time Activity]
 
 i.	Go to EncryptDecryptTool, on path you have copied the zip file to and that specific Path, navigate to D:\NASAzureFileSyncronizer\EncryptDecryptTool and double click on “Startup.bat”
 
-<img src="./images/Picture5.png"/>
+<img src="./images/Picture6.png"/>
+
+ii.	Encrypt below values to add it in input.csv file.
+
+nasMachineUserName
+nasMachinePwd
+CloudEndpointName
+
+<img src="./images/Picture7.png"/>
+
+iii.	Details info from the above image
+1.  Choose 1 for Encryption or 2 for decryption of value you are going to pass in next step, press enter
+2.  Copy the actual value you want to encrypt/decrypt and paste it here, press enter
+3.  For verification Only, Actual Value you passed
+4.  For Use, Encrypted Value: is shown in blue. Please COPY the text after “:” without space.
+
+iv.	Copy the encryption value to input.csv file
+
+v.	Post this, 5 encryption files will be generated on the path:
+
+### 1.4	Step 3 – Verify Main PowerShell script (NASAzureFileSyncronizer.ps1)
+
+i.	Navigate to D:\NASAzureFileSyncronizer\Script\NASAzureFileSyncronizer.ps1
+<img src="./images/Picture8.png"/>
+ii.	Verify the below path is correct
+<img src="./images/Picture9.png"/>
+iii.	Save the file.
