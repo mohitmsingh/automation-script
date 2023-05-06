@@ -34,7 +34,7 @@ ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file 
 | **ennv**                       | Example: dev, sit, uat, prd                                                 | Environment Name                                                                                                                                                                                                                                                                                                                                                           |
 | **nasMachineUserName**         | [Should be encrypted]
 
-]corp-aisXXXdev\\nas_nwf1,
+corp-aisXXXdev\\nas_nwf1,
 
 corp-aisXXXdev\\nas_nwf2 | Username of NAS Machine Login should be encrypted using EncryptDecrypt Tool
 
