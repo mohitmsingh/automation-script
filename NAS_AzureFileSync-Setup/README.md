@@ -58,9 +58,7 @@ i.	Go to EncryptDecryptTool, on path you have copied the zip file to and that sp
 
 ii.	Encrypt below values to add it in input.csv file.
 
-nasMachineUserName
-nasMachinePwd
-CloudEndpointName
+nasMachineUserName <br> nasMachinePwd <br> CloudEndpointName
 
 <img src="./images/Picture7.png"/>
 
@@ -77,7 +75,34 @@ v.	Post this, 5 encryption files will be generated on the path:
 ### 1.4	Step 3 – Verify Main PowerShell script (NASAzureFileSyncronizer.ps1)
 
 i.	Navigate to D:\NASAzureFileSyncronizer\Script\NASAzureFileSyncronizer.ps1
+
 <img src="./images/Picture8.png"/>
+
 ii.	Verify the below path is correct
+
 <img src="./images/Picture9.png"/>
+
 iii.	Save the file.
+
+### 1.5	Step 4 – Create & Configure Task Scheduler
+
+i.	Open “Task Scheduler” --> Click on Import Task
+ii.	Navigate to path: D:\NASAzureFileSyncronizer\Script\TaskScheduler and 
+Select NASAzureFileSyncronizer.xml and import the file to create and configure the task Scheduler.
+iii.	Enable the script
+
+<img src="./images/Picture10.png"/>
+
+iv.	You will see the task scheduler under the path \EntApps\NASAzureFileSyncronizer
+
+<img src="./images/Picture11.png"/>
+
+v.	Check for Action and the path, it should map to D:\NASAzureFileSyncronizer\Batch NASAzureFileSyncronizer.bat
+
+<img src="./images/Picture12.png"/>
+
+### 1.6	Step 5 – Logging
+
+Logs generated here for every run D:\NASAzureFileSyncronizer\Script\Logs and housekeeping policy to keep the last is 5 days’ logs only. It also shows how much time will be taken for whole process to complete.
+
+<img src="./images/Picture13.png"/>
