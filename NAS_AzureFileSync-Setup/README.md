@@ -8,7 +8,7 @@ ii.	Intentional & Adjustable Delay has been added between Azure  File Share to O
 
 iii.	Below diagram is the logical plan of the solution
 
-        <img src="./images/Picture1.png" width="50%"/>
+<img src="./images/Picture1.png" width="50%"/>
 
 iv.	Consideration on the Solution techm has provided:
 1.	Azure Storage Sync Service will take care of syncing from Windows Server (On Prem) to Azure file share by services, so we have not added any code in the main script to handle that.
@@ -24,8 +24,6 @@ i.	Copy the [Zip File](https://github.com/BasicCloudTech/PowershellAutomation/bl
 
 ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file on your local machine for modification (for better visual on the data)
 
-        <img src="./images/Picture3.png" width="50%"/>
+<img src="./images/Picture3.png" width="50%"/>
 
-        <img src="./images/Picture4.png" width="50%"/>
-
-        <img src="./images/Picture5.png" width="50%"/>
+<img src="./images/Picture4.png" width="50%"/>
