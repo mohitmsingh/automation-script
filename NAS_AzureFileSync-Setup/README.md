@@ -18,3 +18,14 @@ So based on that the task scheduler frequency to run should be around every 10mi
 4.	We have added a mechanism to capture the logs on specific path which will be shared in the SOP document.
 
 ### 1.2	Step 1 - Provide Input using CSV file [One Time Activity]
+
+i.	Copy the [Zip File](https://github.com/BasicCloudTech/PowershellAutomation/blob/main/NAS_AzureFileSync-Setup/NAS_AzureFileSync-Setup_5v.zip) to specific VM where we have storage sync service installed onto D: Drive and extract the file there:
+<img src="./images/Picture2.png" width="50%"/>
+
+ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file on your local machine for modification (for better visual on the data)
+
+<img src="./images/Picture3.png" width="50%"/>
+
+<img src="./images/Picture4.png" width="50%"/>
+
+<img src="./images/Picture5.png" width="50%"/>
