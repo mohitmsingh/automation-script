@@ -28,8 +28,8 @@ ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file 
 
 <img src="./images/Picture4.png" width="50%"/>
 
-| **Header**                     | **Header Value**                                                            | **Explanation**                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------------------ | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Header**                     | **Header Value**  | **Explanation** |
+| ------------------------------| --------------------------------------------------------------------------| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **srno**                       | NAS1, NAS2                                                                  | Serial No.     *                                                                                             |
 | **ennv**                       | Example: dev, sit, uat, prd                                                 | Environment Name  |
 | **nasMachineUserName**         | [Should be encrypted] <br> corp-aisXXXdev\\nas_nwf1, <br> corp-aisXXXdev\\nas_nwf2 | Username of NAS Machine Login should be encrypted using EncryptDecrypt Tool [Step 2 - Encrypt Confidential Value One Time Activity](https://github.com/BasicCloudTech/PowershellAutomation/tree/main/NAS_AzureFileSync-Setup#12step-1---provide-input-using-csv-file-one-time-activity)|
@@ -41,22 +41,15 @@ ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file 
 | **inputFolderReadOnly**        | FolderName1,FolderName2 | SubFolder Name which needs to be copied from NAS to Azure Only |
 | **inputFolderWriteOnly**       | FolderName1,FolderName2 | SubFolder Name which needs to be copied from Azure to NAS Only |
 | **rgName**                     | Example: rg-AppName-az-region-dev-001 | Assumption: the value will be same for all NAS to a particular environment. <br> Get the value from Azure side, Resource Group of storage sync service used for this environment  |
-| **StorageSyncServiceName**     | Example:
+| **StorageSyncServiceName**     | Example:sss-appname-az-region-dev-001 | Assumption: the value will be same for all NAS to a particular environment.Get the value from Azure side, Storage Sync Service used for this environment |
+| **SyncGroupName**  | Example: appname-syncgroup1-dev | Assumption: the value will be same for all NAS to a particular environment.Get the value from Azure side, the Sync Group Name used for this from the Storage Sync Service.|
+| **CloudEndpointName** | [Should be encrypted] Example: 112b9026-XXXX-XXXX-XXXX-0e70e17aaf64 | Assumption: the value will be same for all NAS to a particular environment. Get the value from Azure side, Cloud Endpoint created for Sync group of storage sync service used for this environment [Step 2 - Encrypt Confidential Value One Time Activity]() |
 
-sss-enterpriseapp-az-asse-dev-001                                 | Assumption: the value will be same for all NAS to a particular environment.
+iii.	Once the changes are made to input.csv, copy back the input file from local machine to OnPrem Path
+D:\NASAzureFileSyncronizer\Script
 
-Get the value from Azure side, Storage Sync Service used for this environment                                                                                                                                                                                                                 |
-| **SyncGroupName**              | Example:
+### 1.3	Step 2 - Encrypt Confidential Value [One Time Activity]
 
-iwf-pcs-syncgroup1-dev                                            | Assumption: the value will be same for all NAS to a particular environment.
+i.	Go to EncryptDecryptTool, on path you have copied the zip file to and that specific Path, navigate to D:\NASAzureFileSyncronizer\EncryptDecryptTool and double click on “Startup.bat”
 
-Get the value from Azure side, the Sync Group Name used for this from the Storage Sync Service.                                                                                                                                                                                               |
-| **CloudEndpointName**          | [Should be encrypted]
-
-Example:
-
-112b9026-XXXX-XXXX-XXXX-0e70e17aaf64       | Assumption: the value will be same for all NAS to a particular environment.
-
-Get the value from Azure side, Cloud Endpoint created for Sync group of storage sync service used for this environment
-
-[Step 2 - Encrypt Confidential Value [One Time Activity]](file:///C:/Users/Asus/Downloads/AIS%20-%20TechMahindra%20-%20Azure%20Infra%20Setup_20230320.docx#_Step_2_-) |
+<img src="./images/Picture5.png" width="50%"/>
