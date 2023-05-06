@@ -36,19 +36,11 @@ ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file 
 | **nasMachinePwd**              | [Should be encrypted] <br> Password@1,Password@2 | Username of NAS Machine Login should be encrypted using EncryptDecrypt Tool [Step 2 - Encrypt Confidential Value One Time Activity](https://github.com/BasicCloudTech/PowershellAutomation/tree/main/NAS_AzureFileSync-Setup#12step-1---provide-input-using-csv-file-one-time-activity) |
 | **inputNASPath**               | \\\\10.137.XX.X\\sht_sdwf                                                   | NAS Path which needs to be mapped as drive. It should be in same format  |
 | **inputOnPremPath**            | D:\\sht_sbnwf                                                               | On Prem Path (windows server) where the script has been copied    |
-| **inputParentFolder**          | \\DEV\\DATA\\                                                               | NAS **Parent** **Folder should be added here** example:
-
-\\DEV\\DATA1\\ belongs to [NAS1]
-
-\\STG\\DATA2\\ belongs to [NAS2]                                                                                                                                                                                                                                                |
-| **inputFolderReadWriteAccess** | <FolderName1>,<FolderName2>                                                 | SubFolder Name which needs to be copied from NAS to Azure & Azure to NAS                                                                                                                                                                                                                                                                                                   |
-| **inputFolderReadOnly**        | <FolderName1>,<FolderName2>                                                 | SubFolder Name which needs to be copied from NAS to Azure Only                                                                                                                                                                                                                                                                                                             |
-| **inputFolderWriteOnly**       | <FolderName1>,<FolderName2>                                                 | SubFolder Name which needs to be copied from Azure to NAS Only                                                                                                                                                                                                                                                                                                             |
-| **rgName**                     | Example:
-
- rg-EnterpriseAppOperation-az-asse-dev-001                        | Assumption: the value will be same for all NAS to a particular environment.
-
-Get the value from Azure side, Resource Group of storage sync service used for this environment                                                                                                                                                                                               |
+| **inputParentFolder**          | \\DEV\\DATA\\ | NAS **Parent** **Folder should be added here** example: <br> \\DEV\\DATA1\\ belongs to **NAS1** <br> \\STG\\DATA2\\ belongs to  **NAS2** |
+| **inputFolderReadWriteAccess** | <FolderName1>,<FolderName2>   | SubFolder Name which needs to be copied from NAS to Azure & Azure to NAS |
+| **inputFolderReadOnly**        | <FolderName1>,<FolderName2> | SubFolder Name which needs to be copied from NAS to Azure Only |
+| **inputFolderWriteOnly**       | <FolderName1>,<FolderName2> | SubFolder Name which needs to be copied from Azure to NAS Only |
+| **rgName**                     | Example: rg-AppName-az-region-dev-001 <br> Assumption: the value will be same for all NAS to a particular environment. <br> Get the value from Azure side, Resource Group of storage sync service used for this environment  |
 | **StorageSyncServiceName**     | Example:
 
 sss-enterpriseapp-az-asse-dev-001                                 | Assumption: the value will be same for all NAS to a particular environment.
