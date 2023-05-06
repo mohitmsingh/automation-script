@@ -1,0 +1,1 @@
+Powershell.exe -executionpolicy remotesigned -File  .\EncryptDecryptTool.ps1
