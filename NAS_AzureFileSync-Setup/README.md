@@ -32,11 +32,7 @@ ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file 
 | ------------------------------ | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **srno**                       | NAS1, NAS2                                                                  | Serial No.                                                                                                                                                                                                                                                                                                                                                                 |
 | **ennv**                       | Example: dev, sit, uat, prd                                                 | Environment Name                                                                                                                                                                                                                                                                                                                                                           |
-| **nasMachineUserName**         | [Should be encrypted]
-
-corp-aisXXXdev\\nas_nwf1,
-
-corp-aisXXXdev\\nas_nwf2 | Username of NAS Machine Login should be encrypted using EncryptDecrypt Tool
+| **nasMachineUserName**         | [Should be encrypted] <br> corp-aisXXXdev\\nas_nwf1, <br> corp-aisXXXdev\\nas_nwf2 | Username of NAS Machine Login should be encrypted using EncryptDecrypt Tool
 
 [Step 2 - Encrypt Confidential Value [One Time Activity]](file:///C:/Users/Asus/Downloads/AIS%20-%20TechMahindra%20-%20Azure%20Infra%20Setup_20230320.docx#_Step_2_-)                                                                                                                         |
 | **nasMachinePwd**              | [Should be encrypted]
