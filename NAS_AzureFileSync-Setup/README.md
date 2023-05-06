@@ -40,7 +40,7 @@ ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file 
 | **inputFolderReadWriteAccess** | FolderName1,FolderName2   | SubFolder Name which needs to be copied from NAS to Azure & Azure to NAS |
 | **inputFolderReadOnly**        | FolderName1,FolderName2 | SubFolder Name which needs to be copied from NAS to Azure Only |
 | **inputFolderWriteOnly**       | FolderName1,FolderName2 | SubFolder Name which needs to be copied from Azure to NAS Only |
-| **rgName**                     | Example: rg-AppName-az-region-dev-001 <br> Assumption: the value will be same for all NAS to a particular environment. <br> Get the value from Azure side, Resource Group of storage sync service used for this environment  |
+| **rgName**                     | Example: rg-AppName-az-region-dev-001 | Assumption: the value will be same for all NAS to a particular environment. <br> Get the value from Azure side, Resource Group of storage sync service used for this environment  |
 | **StorageSyncServiceName**     | Example:
 
 sss-enterpriseapp-az-asse-dev-001                                 | Assumption: the value will be same for all NAS to a particular environment.
