@@ -1,10 +1,10 @@
-# NASAzureFileSyncronizer (Sync NAS(OnPrem) to VM to Azure Cloud)
+# NASAzureFileSyncronizer (Sync NAS(OnPrem) to Jump Server to Azure Cloud)
 
 ### 1.1	Assumption & Limitation
 
-i.	Between OnPrem VM to NAS, Robocopy is in place without /MIR i.e. Copy paste is happening between those endpoints, due to which anything deleted from Azure File Share will never be deleted from NAS.
+i.	Between OnPrem Jump Server to NAS, Robocopy is in place without /MIR i.e. Copy paste is happening between those endpoints, due to which anything deleted from Azure File Share will never be deleted from NAS.
 
-ii.	Intentional & Adjustable Delay has been added between Azure  File Share to OnPrem VM to avoid any potential data/file loss
+ii.	Intentional & Adjustable Delay has been added between Azure  File Share to OnPrem Jump Server to avoid any potential data/file loss
 
 iii.Below diagram is the logical plan of the solution
 
@@ -19,7 +19,7 @@ So based on that the task scheduler frequency to run should be around every 10mi
 
 ### 1.2	Step 1 - Provide Input using CSV file [One Time Activity]
 
-i.	Download the Tool Zip Package (https://github.com/mohitmsingh/automation-script/blob/main/powershell/NASAzureFileSyncronizer/NASAzureFileSyncronizer.zip) to specific VM where we have storage sync service installed onto D: Drive and extract the file there:
+i.	Download the Tool Zip Package (https://github.com/mohitmsingh/automation-script/blob/main/powershell/NASAzureFileSyncronizer/NASAzureFileSyncronizer.zip) to specific Jump Server where we have storage sync service installed onto D: Drive and extract the file there:
 <img src="./images/Picture2.png"/>
 
 ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file on your local machine for modification (for better visual on the data)
