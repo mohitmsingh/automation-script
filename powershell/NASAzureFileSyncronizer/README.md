@@ -6,7 +6,7 @@ i.	Between OnPrem VM to NAS, Robocopy is in place without /MIR i.e. Copy paste i
 
 ii.	Intentional & Adjustable Delay has been added between Azure  File Share to OnPrem VM to avoid any potential data/file loss
 
-iii. Below diagram is the logical plan of the solution
+iii.Below diagram is the logical plan of the solution
 
 <img src="./images/Picture1.png">
 
@@ -19,7 +19,7 @@ So based on that the task scheduler frequency to run should be around every 10mi
 
 ### 1.2	Step 1 - Provide Input using CSV file [One Time Activity]
 
-i.	Download the Tool Zip Package (https://github.com/BasicCloudTech/PowershellAutomation/raw/main/NASAzureFileSyncronizer/NASAzureFileSyncronizer.zip) to specific VM where we have storage sync service installed onto D: Drive and extract the file there:
+i.	Download the Tool Zip Package (https://github.com/mohitmsingh/automation-script/blob/main/powershell/NASAzureFileSyncronizer/NASAzureFileSyncronizer.zip) to specific VM where we have storage sync service installed onto D: Drive and extract the file there:
 <img src="./images/Picture2.png"/>
 
 ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file on your local machine for modification (for better visual on the data)
@@ -32,8 +32,8 @@ ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file 
 | ------------------------------| --------------------------------------------------------------------------| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **srno**                       | NAS1, NAS2                                                                  | Serial No.     *                                                                                             |
 | **ennv**                       | Example: dev, sit, uat, prd                                                 | Environment Name  |
-| **nasMachineUserName**         | [Should be encrypted] <br> corp-aisXXXdev\\nas_nwf1, <br> corp-aisXXXdev\\nas_nwf2 | Username of NAS Machine Login should be encrypted using EncryptDecrypt Tool [Step 2 - Encrypt Confidential Value One Time Activity](https://github.com/BasicCloudTech/PowershellAutomation/tree/main/NASAzureFileSyncronizer#13step-2---encrypt-confidential-value-one-time-activity) |
-| **nasMachinePwd**              | [Should be encrypted] <br> Password@1,Password@2 | Username of NAS Machine Login should be encrypted using EncryptDecrypt Tool [Step 2 - Encrypt Confidential Value One Time Activity](https://github.com/BasicCloudTech/PowershellAutomation/tree/main/NASAzureFileSyncronizer#13step-2---encrypt-confidential-value-one-time-activity) |
+| **nasMachineUserName**         | [Should be encrypted] <br> corp-aisXXXdev\\nas_nwf1, <br> corp-aisXXXdev\\nas_nwf2 | Username of NAS Machine Login should be encrypted using EncryptDecrypt Tool [Step 2 - Encrypt Confidential Value One Time Activity](https://github.com/mohitmsingh/automation-script/tree/main/powershell/NASAzureFileSyncronizer#13step-2---encrypt-confidential-value-one-time-activity) |
+| **nasMachinePwd**              | [Should be encrypted] <br> Password@1,Password@2 | Username of NAS Machine Login should be encrypted using EncryptDecrypt Tool [Step 2 - Encrypt Confidential Value One Time Activity](https://github.com/mohitmsingh/automation-script/tree/main/powershell/NASAzureFileSyncronizer#13step-2---encrypt-confidential-value-one-time-activity) |
 | **inputNASPath**               | \\\\10.137.XX.X\\sht_sdwf                                                   | NAS Path which needs to be mapped as drive. It should be in same format  |
 | **inputOnPremPath**            | D:\\sht_sbnwf                                                               | On Prem Path (windows server) where the script has been copied    |
 | **inputParentFolder**          | \\DEV\\DATA\\ | NAS **Parent** **Folder should be added here** example: <br> \\DEV\\DATA1\\ belongs to **NAS1** <br> \\STG\\DATA2\\ belongs to  **NAS2** |
@@ -43,7 +43,7 @@ ii.	Navigate to Path D:\NASAzureFileSyncronizer\Script, and copy Input.csv file 
 | **rgName**                     | Example: rg-AppName-az-region-dev-001 | Assumption: the value will be same for all NAS to a particular environment. <br> Get the value from Azure side, Resource Group of storage sync service used for this environment  |
 | **StorageSyncServiceName**     | Example:sss-appname-az-region-dev-001 | Assumption: the value will be same for all NAS to a particular environment.Get the value from Azure side, Storage Sync Service used for this environment |
 | **SyncGroupName**  | Example: appname-syncgroup1-dev | Assumption: the value will be same for all NAS to a particular environment.Get the value from Azure side, the Sync Group Name used for this from the Storage Sync Service.|
-| **CloudEndpointName** | [Should be encrypted] Example: 112b9026-XXXX-XXXX-XXXX-0e70e17aaf64 | Assumption: the value will be same for all NAS to a particular environment. Get the value from Azure side, Cloud Endpoint created for Sync group of storage sync service used for this environment [Step 2 - Encrypt Confidential Value One Time Activity](https://github.com/BasicCloudTech/PowershellAutomation/tree/main/NASAzureFileSyncronizer#13step-2---encrypt-confidential-value-one-time-activity) |
+| **CloudEndpointName** | [Should be encrypted] Example: 112b9026-XXXX-XXXX-XXXX-0e70e17aaf64 | Assumption: the value will be same for all NAS to a particular environment. Get the value from Azure side, Cloud Endpoint created for Sync group of storage sync service used for this environment [Step 2 - Encrypt Confidential Value One Time Activity](https://github.com/mohitmsingh/automation-script/tree/main/powershell/NASAzureFileSyncronizer#13step-2---encrypt-confidential-value-one-time-activity) |
 
 iii.	Once the changes are made to input.csv, copy back the input file from local machine to OnPrem Path
 D:\NASAzureFileSyncronizer\Script
